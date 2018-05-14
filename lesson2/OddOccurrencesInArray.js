@@ -2,28 +2,9 @@
 // console.log('this is a debug message');
 
 function solution(A) {
-    for (let index = 0; index < A.length; index++) {
-        const element = A[index];
-       
-        if (A[index - 1] && element === A[index - 1]) {
-            continue;
-        }
-
-        if (A[index - 2] && element === A[index - 2]) {
-            continue; 
-        }
-    
-        if (A[index + 1] && element === A[index + 1]) {
-            continue; 
-        }
-
-        if (A[index + 2] && element === A[index + 2]) {
-            continue; 
-        }
-
-        return element;
-    }
+    let elem = 0;
+	for (let i = 0; i < A.length; i++) {
+		elem ^= A[i];
+	}
+	return elem;
 }
-
-
-[2, 2, 3, 3, 4]
