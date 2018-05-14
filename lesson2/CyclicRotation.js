@@ -2,7 +2,6 @@
 // console.log('this is a debug message');
 
 function solution(A, K) {
-    
     if (K >= A.length) {
         K = Math.floor(K % A.length);
         if (K == 0) {
