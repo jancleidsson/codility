@@ -4,9 +4,9 @@
 // Detected time complexity:O(N) or O(N * log(N))
 
 function solution(A) {
-    let currentCalc = 0;
+    let arrayAmmount = 0;
     for (let index = 0; index < A.length; index++) {
-          currentCalc += A[index];
-     }
-     return ((A.length + 1) * ((A.length + 1) + 1) / 2) - currentCalc;
+        arrayAmmount += A[index];
+    }
+    return ((A.length + 1) * ((A.length + 1) + 1) / 2) - arrayAmmount;
  }
