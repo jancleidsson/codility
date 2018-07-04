@@ -3,10 +3,6 @@
 
 function solution(A) {
     let totalSum = A.length * (A.length + 1) / 2;
-    arraySum = A.reduce((total, num) => {
-        return total + num;
-    });
-
     let count = 0;
     let set = new Set();
     for (let index = 0; index < A.length; index++) {
@@ -19,7 +15,7 @@ function solution(A) {
         }
     }
 
-    return totalSum === arraySum ? 1 : 0;
+    return totalSum === count ? 1 : 0;
 }
 
 console.log(solution([3, 2, 1]));
