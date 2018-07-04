@@ -7,6 +7,18 @@ function solution(A) {
         return total + num;
     });
 
+    let count = 0;
+    let set = new Set();
+    for (let index = 0; index < A.length; index++) {
+        const element = A[index];
+        count = count + element
+        if (!set.has(element)) {
+            set.add(element);
+        } else {
+            return 0;
+        }
+    }
+
     return totalSum === arraySum ? 1 : 0;
 }
 
